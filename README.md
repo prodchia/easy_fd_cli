@@ -10,6 +10,6 @@ Open config.cfg and complete the required information there
 
 That's it.
 
-Now to recover coins try
+Now to recover coins:
 
 get_coins coiname
