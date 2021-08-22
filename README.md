@@ -15,4 +15,4 @@ That's it.
 
 Now to recover coins:
 
-get_coins coiname
+get_coins.bat coiname
