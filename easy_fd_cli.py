@@ -1,8 +1,9 @@
 '''
 Created on Aug 20, 2021
 
-@author: ashay
+@author: prodchia
 '''
+
 import os, argparse , configparser
 import pathlib, yaml
 
@@ -48,7 +49,7 @@ if __name__== "__main__":
     os.environ['FD_CLI_WT_DB_PATH'] = FD_CLI_WT_DB_PATH
     
     certificate = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\config\\ssl\\full_node\\private_full_node.crt "
-    key = f"C:\\Users\\ashay\\.{blockchain}\\mainnet\\config\\ssl\\full_node\\private_full_node.key "
+    key = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\config\\ssl\\full_node\\private_full_node.key "
 
     # read config to get rpc_port
     config_file = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\config\\config.yaml"
