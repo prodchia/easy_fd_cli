@@ -3,7 +3,6 @@ Created on Aug 20, 2021
 
 @author: prodchia
 '''
-
 import os, argparse , configparser
 import pathlib, yaml
 
@@ -11,10 +10,12 @@ import pathlib, yaml
 if __name__== "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('--blockchain',default = 'flora')
+    parser.add_argument('--blockchain',default = 'silicoin')
     args = parser.parse_args()
     blockchain = args.blockchain
-
+    
+    if blockchain in ['goji','spare']:
+        blockchain = blockchain + '-blockchain'
     
     # get config file
     config_file = os.path.join(pathlib.Path(__file__).parent.resolve(), 'config.cfg')
@@ -39,13 +40,20 @@ if __name__== "__main__":
     user = config['main']['user']
 
     # Set blockchain path.
-    FD_CLI_BC_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\db\\blockchain_v1_mainnet.sqlite"
+    if blockchain == 'silicoin':
+        FD_CLI_BC_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\db\\blockchain_v1_testnet.sqlite"
+    else:
+        FD_CLI_BC_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\db\\blockchain_v1_mainnet.sqlite"
+
     os.environ['FD_CLI_BC_DB_PATH'] = FD_CLI_BC_DB_PATH
-    
+    print(FD_CLI_BC_DB_PATH)
     # Set wallet path.
     # This must be the wallet that is associated with mnemonic from which NFT plot was created. (Usually your hot wallet)
     # Replace <fingerprint> with your wallet fingerprint found at below path or by using "chia wallet show"
-    FD_CLI_WT_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\wallet\\db\\blockchain_wallet_v1_mainnet_{fingerprint}.sqlite"
+    if blockchain == 'silicoin':
+        FD_CLI_WT_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\wallet\\db\\blockchain_wallet_v1_testnet_{fingerprint}.sqlite"
+    else:
+        FD_CLI_WT_DB_PATH = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\wallet\\db\\blockchain_wallet_v1_mainnet_{fingerprint}.sqlite"
     os.environ['FD_CLI_WT_DB_PATH'] = FD_CLI_WT_DB_PATH
     
     certificate = f"C:\\Users\\{user}\\.{blockchain}\\mainnet\\config\\ssl\\full_node\\private_full_node.crt "
