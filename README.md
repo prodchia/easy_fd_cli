@@ -15,4 +15,6 @@ That's it.
 
 Now to recover coins:
 
-get_coins.bat coiname
+get_coins.bat coinname(e.g. flora, dogechia etc.)
+
+I want to mention that I haven't been succesful in recovering NFT rewards for cactus.
