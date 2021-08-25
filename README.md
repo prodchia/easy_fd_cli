@@ -22,7 +22,9 @@ I want to mention that I haven't been succesful in recovering NFT rewards for ca
 If you receive the error "ImportError: DLL load failed while importing blspy: The specified module could not be found", it's likely due to the missing Visual C++ redistributable package used by blspy. You can try to the reinstall blspy. 
 
 [a] Go to the easy_fd_cli directory
+
 [b] call .\venv\Scripts\activate
+
 [c] pip install blspy
 
 If [c] works try to run get_coins.bat. If it doesn't then it probably crashed with some error like c++ not found. You can download and install what it is asking for, and follow the steps from a-c. Hopefully it should work
