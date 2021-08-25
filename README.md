@@ -2,19 +2,27 @@
 
 Easy windows version to install and run  https://github.com/Flora-Network/fd-cli
 
- git clone https://github.com/prodchia/easy_fd_cli.git 
+[1] git clone https://github.com/prodchia/easy_fd_cli.git 
  
- cd easy_fd_cli 
+[2] cd easy_fd_cli 
  
- easy_setup.bat 
+[3] easy_setup.bat 
 
 
-Open config.cfg and complete the required information there
+[4] Open config.cfg and complete the required information there
 
 That's it.
 
 Now to recover coins:
 
-get_coins.bat coinname(e.g. flora, dogechia etc.)
+[5] get_coins.bat coinname(e.g. flora, dogechia etc.)
 
 I want to mention that I haven't been succesful in recovering NFT rewards for cactus.
+
+If you receive the error "ImportError: DLL load failed while importing blspy: The specified module could not be found", it's likely due to the missing Visual C++ redistributable package used by blspy. You can try to the reinstall blspy. 
+
+[a] Go to the easy_fd_cli directory
+[b] call .\venv\Scripts\activate
+[c] pip install blspy
+
+If [c] works try to run get_coins.bat. If it doesn't then it probably crashed with some error like c++ not found. You can download and install what it is asking for, and follow the steps from a-c. Hopefully it should work
