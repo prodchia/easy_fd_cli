@@ -12,13 +12,13 @@ Easy windows version to install and run  https://github.com/Flora-Network/fd-cli
 [4] Open config.cfg and complete the required information there
 
 
-Wallet fingerprint found at below path or by using "chia wallet show"
+   Wallet fingerprint found at below path or by using "chia wallet show"
 
-Launcher ID: can be obtained using "chia plotnft show"
+   Launcher ID: can be obtained using "chia plotnft show"
 
-Pool contract address: can be obtained using "chia plotnft show" and it should start with xch
+   Pool contract address: can be obtained using "chia plotnft show" and it should start with xch
 
-Window User is the windows user name under which you are currently working. 
+   Window User is the windows user name under which you are currently working. 
 
 
 That's it.
