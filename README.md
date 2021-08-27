@@ -16,7 +16,7 @@ Wallet fingerprint found at below path or by using "chia wallet show"
 
 Launcher ID: can be obtained using "chia plotnft show"
 
-Pool contract address: can be obtained using "chia plotnft show" and it shoud start with xch
+Pool contract address: can be obtained using "chia plotnft show" and it should start with xch
 
 Window User is the windows user name under which you are currently working. 
 
