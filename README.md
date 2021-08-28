@@ -27,7 +27,7 @@ Now to recover coins:
 
 [5] get_coins.bat coinname(e.g. flora, dogechia etc.)
 
-Previously NFT coins from cactus-blockchain were not recoverable. After the awesome changes made by Cactus-Network to fd-cli, the cactus coins are recoverable too. 
+There are some slight differenes between various blockchains. To recover cactus coins use the easy_fd_cli_cactus version. 
 
 If you receive the error "ImportError: DLL load failed while importing blspy: The specified module could not be found", it's likely due to the missing Visual C++ redistributable package used by blspy. You can try to the reinstall blspy. 
 
