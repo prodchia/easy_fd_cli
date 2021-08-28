@@ -1,4 +1,4 @@
-git clone https://github.com/Flora-Network/fd-cli .\temp
+git clone https://github.com/Cactus-Network/fd-cli .\temp
 xcopy /E /H /Y .\temp\ .\
 python -m venv venv
 rmdir /s /q temp
