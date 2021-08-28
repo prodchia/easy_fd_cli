@@ -27,7 +27,7 @@ Now to recover coins:
 
 [5] get_coins.bat coinname(e.g. flora, dogechia etc.)
 
-There are some slight differenes between various blockchains. To recover cactus coins use the easy_fd_cli_cactus version.(https://github.com/prodchia/easy_fd_cli_cactus)
+This version works with forks like dogecoin and flora that are based on pre-chia 1.2.0. To recover from blockchains based on the latest chia code use the easy_fd_cli_cactus version.(https://github.com/prodchia/easy_fd_cli_cactus)
 
 If you receive the error "ImportError: DLL load failed while importing blspy: The specified module could not be found", it's likely due to the missing Visual C++ redistributable package used by blspy. You can try to the reinstall blspy. 
 
